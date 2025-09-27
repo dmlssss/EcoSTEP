@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSTEP - Zero-Waste Fashion Show</title>
+  <style>
+    :root{--bg:#faf7fb;--card:#fff;--accent:#f6a9d6;--muted:#6b6b6b;--glass:rgba(255,255,255,0.6)}
+    *{box-sizing:border-box;font-family:'Garamond', serif}
+    body{margin:0;background:linear-gradient(180deg,#fff0f7 0%, #f8e6f0 100%);color:#333;line-height:1.5}
+    .container{max-width:1000px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;gap:20px}
+
+    h1{margin:0;font-size:30px;color:#a83279}
+    p.lead{color:#555;margin:8px 0 20px;font-style:italic}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:20px}
+    .card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,0.08)}
+
+    h2{margin-top:0;color:#a83279}
+    ul{padding-left:18px}
+    .steps{display:flex;flex-direction:column;gap:10px}
+
+    /* Parlak & çıkıntılı butonlar */
+    .btn {
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:12px;
+      background:linear-gradient(145deg, #f6a9d6, #f083be);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 6px 14px rgba(240,131,190,0.8), inset 0 2px 6px rgba(255,255,255,0.6);
+      transition:all 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+      transform:translateY(-3px) scale(1.05);
+      box-shadow:0 10px 22px rgba(240,131,190,1), inset 0 2px 10px rgba(255,255,255,0.7);
+    }
+
+    .mutebtn {
+      background:linear-gradient(145deg, #fff, #f2f2f2);
+      border:1px solid #ddd;
+      color:#555;
+      padding:12px 16px;
+      border-radius:12px;
+      font-weight:500;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:all 0.2s ease-in-out;
+    }
+
+    .mutebtn:hover {
+      transform:translateY(-2px);
+      box-shadow:0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .timeline .item{background:#faf1f6;padding:12px;border-radius:12px}
+
+    form.row{display:flex;flex-direction:column;gap:10px}
+    input,textarea,select{background:#fdfcfc;border:1px solid #ddd;padding:10px;border-radius:10px;color:#333}
+
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+
+    footer{margin-top:18px;color:#777;font-size:13px;text-align:center;font-style:italic}
+
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#fdf1f7;color:#a83279;font-size:13px;font-weight:bold}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}}
+
+    /* Daha parlak yanıp sönen parlama efekti */
+    .highlight {
+      animation: glow 2s ease-in-out 2;
+    }
+
+    @keyframes glow {
+      0%   { box-shadow: 0 0 0 rgba(246,169,214,0); }
+      20%  { box-shadow: 0 0 40px rgba(246,169,214,1); }
+      40%  { box-shadow: 0 0 0 rgba(246,169,214,0); }
+      60%  { box-shadow: 0 0 50px rgba(246,169,214,1); }
+      100% { box-shadow: 0 0 0 rgba(246,169,214,0); }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>EcoSTEP Zero-Waste Fashion Show</h1>
+        <p class="lead">Tekstil atıklarını sanat ve tasarımla dönüştüren okul projesi. Sürdürülebilir moda, yaratıcılık ve estetik dokunuş.</p>
+        <div style="margin-top:8px">
+          <span class="badge">Hazırlayanlar: Damla Nur Türkmen, Merve Sena Çakır, Elif Kayra Çelebi</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card">
+          <h2>Proje Özeti</h2>
+          <p>
+            EcoSTEP Zero-Waste Fashion Show, gençleri moda ve çevre bilinciyle buluşturan yenilikçi bir okul projesidir. 
+            Öğrenciler, atık kumaş ve giysileri dönüştürerek özgün kıyafetler tasarlamaktadır. 
+            Her tasarım, <strong>“Atık = Kaynak”</strong> fikrini yayarken estetiği sürdürülebilirlikle buluşturur.
+          </p>
+          <p>
+            Proje; takım çalışması, yaratıcılık, sahne deneyimi ve toplumsal farkındalık gibi birçok kazanımı da beraberinde getirir. 
+            Öğrenciler ürettikleri tasarımları sahnede sergiler ve geniş kitlelere çevre dostu moda mesajı verirler.
+          </p>
+
+          <div class="gallery">
+            <img src="https://www.tagvenue.com/images/location-pages/1920x1080/4451.jpg" alt="Defile Sahnesi">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMVklAREUdZ26ey0JPavoKN2mIoiHf9LrVcw&s" alt="Tasarım Atölyesi">
+            <img src="https://alamandatextiles.weebly.com/uploads/5/4/0/1/54018893/6798815_orig.jpg" alt="Tekstil Kutuları">
+            <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439" alt="Ödül Anı">
+          </div>
+
+          <h3>Ödüller</h3>
+          <p><strong>Dereceye giren öğrenciler için ödüller:</strong></p>
+          <ul>
+            <li><strong>1.lik Ödülü:</strong> İtalya’da uluslararası bir fashion show izleme hakkı (uçak, konaklama ve bilet dahil).</li>
+            <li><strong>2.lik Ödülü:</strong> Profesyonel moda tasarımcıları ile özel mentorluk atölyesi.</li>
+            <li><strong>3.lük Ödülü:</strong> Okul panosunda ve yerel basında tasarımların sergilenmesi.</li>
+            <li>Tüm finalistlere: Sertifika ve EcoSTEP hatıra ürünleri.</li>
+          </ul>
+
+          <p style="margin-top:12px"><a class="btn" href="#signup">Katıl / Kayıt</a> <a class="mutebtn" href="#schedule">Takvimi Gör</a></p>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="card">
+          <h2>Hakkımızda</h2>
+          <p>EcoSTEP, gençlerin küçük adımlarla büyük etkiler yaratabileceğini savunan çevre odaklı bir öğrenci girişimidir. Moda, sanat ve geri dönüşümü bir araya getirerek sürdürülebilir bir gelecek için farkındalık yaratmayı amaçlıyoruz.</p>
+          <p>Projeyi geliştiren: <strong>Damla Nur Türkmen</strong></p>
+          <p>İletişim: <a href="mailto:ecostep.project@gmail.com">ecostep.project@gmail.com</a></p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card" id="schedule">
+          <h2>Takvim & Tarihler</h2>
+          <div class="timeline">
+            <div class="item"><strong>Hafta 1:</strong> Duyuru & tekstil toplama</div>
+            <div class="item"><strong>Hafta 2–3:</strong> Atölyeler & tasarımlar</div>
+            <div class="item"><strong>Hafta 4:</strong> Prova hazırlıkları</div>
+            <div class="item"><strong>Hafta 5:</strong> Fashion Show</div>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card" id="signup">
+          <h2>Kayıt</h2>
+          <form class="row" onsubmit="alert('Kayıt gönderildi! (demo)');return false;">
+            <label>Okul / Sınıf<input type="text" placeholder="Örn: 8-A" required></label>
+            <label>Grup Lideri<input type="text" placeholder="İsim" required></label>
+            <label>Katılımcı Sayısı<select><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+            <label>İhtiyaçlar / Notlar<textarea rows="3" placeholder="Özel gereksinim veya sorular"></textarea></label>
+            <button class="btn" type="submit">Kayıt Gönder</button>
+          </form>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <!-- Yeni kutucuk -->
+        <div class="card">
+          <h2>Çevresel Katkı Projesi</h2>
+          <p>
+            Katılımcılar defile için kıyafetlerini tasarladıktan sonra, 
+            kullandıkları malzemelerin çevreye sağladığı katkıyı anlatan kısa bir <strong>mini proje</strong> hazırlayacaktır. 
+          </p>
+          <ul>
+            <li>Kumaşın veya malzemenin geri dönüşüm süreci</li>
+            <li>Atık azaltımına sağladığı katkı</li>
+            <li>Doğal kaynakların korunmasına etkisi</li>
+            <li>Kendi yaratıcı çözüm önerileri</li>
+          </ul>
+          <p>
+            Bu çalışmalar, defile günü sergi alanında sunulacak ve katılımcıların çevre bilinci ile yaratıcılıklarını birleştirdiklerini gösterecektir. 🌱
+          </p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>EcoSTEP • Zero-Waste Fashion Show ✨</p>
+      <p style="font-size:13px;color:#555">
+        Hazırlayanlar: <strong>Damla Nur Türkmen, Merve Sena Çakır, Elif Kayra Çelebi</strong>
+      </p>
+      <p style="font-size:12px;color:#777">Not: İtalya'daki fashion show ödülü, veli onayı ve okul yönetimi desteğiyle sağlanacaktır.</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript ile parlama efekti -->
+  <script>
+    document.querySelectorAll('a.btn[href="#signup"]').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const target = document.querySelector('#signup');
+        if (target) {
+          target.classList.add('highlight');
+          setTimeout(() => target.classList.remove('highlight'), 4000);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
